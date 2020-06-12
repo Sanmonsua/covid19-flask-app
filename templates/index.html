@@ -1,0 +1,49 @@
+{%extends "layout.html"%}
+{%block title%}
+COVID-19
+{%endblock%}
+{%block body%}
+<h1 class="text-center">COVID-19 Global status</h1>
+<div style="margin-top=300px" class="card-deck col-12 align-middle">
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header"><h4 class="text-center">Confirmed Cases</h4></div>
+      <div class="card-body">
+        <h1 class="text-center">{{confirmed}}</h1>
+      </div>
+  </div>
+  <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+      <div class="card-header"><h4 class="text-center">Deaths</h4></div>
+      <div class="card-body">
+        <h1 class="text-center">{{deaths}}</h1>
+      </div>
+  </div>
+  <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header"><h4 class="text-center">Recovered</h4></div>
+      <div class="card-body">
+        <h1 class="text-center">{{recovered}}</h1>
+      </div>
+  </div>
+</div>
+
+<form action="{{url_for('country_data')}}" method="post">
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <select  class="form-control" id="exampleFormControlSelect1" name="country">
+        {%for c in countries%}
+          <option value="{{c.Code}}">{{c.Name}}</option>
+        {%else%}
+          No countries loaded
+        {%endfor%}
+      </select>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-info btn-block" type="submit">Get data</button>
+    </div>
+  </div>
+
+
+</form>
+<br>
+{%block country_data%}
+{%endblock%}
+{%endblock%}
