@@ -30,5 +30,5 @@ def getDataForCountry(code):
     return response.json()[0]
 
 if __name__ == "__main__":
-    #print(getTotal()['confirmed'])
-    print(getDataForCountry('Colombia'))
+    print(getTotal()['confirmed'])
+    #print(getDataForCountry('Colombia'))
