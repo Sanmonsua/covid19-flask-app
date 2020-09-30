@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>COVID-19 | APP</title>
+		<script
+			src="{{url_for('static', filename='index.js')}}"
+			charset="utf-8"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+	</head>
 
-<head>
-  <meta charset="utf-8">
-  <title>COVID-19 | APP</title>
-  <script src="{{url_for('static', filename='index.js')}}" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-
-<body>
-  <div id="results" class="container col-10">
-    <h1 class="text-center">COVID-19 Global status</h1>
-    <div style="margin-top:100px;" class="card-deck col-12 align-middle">
-      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <h4 class="text-center">Confirmed</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="text-center" id="confirmed"></h1>
-        </div>
-      </div>
-      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <h4 class="text-center">Deaths</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="text-center" id="deaths"></h1>
-        </div>
-      </div>
-      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <h4 class="text-center">Recovered</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="text-center" id="recovered"></h1>
-        </div>
-      </div>
-    </div>
-  <form id="form-country">
-    <div class="form-row align-items-center">
-      <div class="col-auto">
-        <select class="form-control" id="countrySelect" name="country">
-        </select>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-info btn-block" type="submit">Get data</button>
-      </div>
-    </div>
-  </form>
-</div>
-</body>
-
+	<body>
+		<div id="results" class="container col-10">
+			<h1 class="text-center">COVID-19 Global status</h1>
+			<div
+				style="margin-top: 100px"
+				class="card-deck col-12 align-middle"
+			>
+				<div
+					class="card text-white bg-primary mb-3"
+					style="max-width: 18rem"
+				>
+					<div class="card-header">
+						<h4 class="text-center">Confirmed</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="text-center" id="confirmed"></h1>
+					</div>
+				</div>
+				<div
+					class="card text-white bg-danger mb-3"
+					style="max-width: 18rem"
+				>
+					<div class="card-header">
+						<h4 class="text-center">Deaths</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="text-center" id="deaths"></h1>
+					</div>
+				</div>
+				<div
+					class="card text-white bg-success mb-3"
+					style="max-width: 18rem"
+				>
+					<div class="card-header">
+						<h4 class="text-center">Recovered</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="text-center" id="recovered"></h1>
+					</div>
+				</div>
+			</div>
+			<form id="form-country">
+				<div class="form-row align-items-center">
+					<div class="col-auto">
+						<select
+							class="form-control"
+							id="countrySelect"
+							name="country"
+						></select>
+					</div>
+					<div class="col-auto">
+						<button class="btn btn-info btn-block" type="submit">
+							Get data
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
 </html>
